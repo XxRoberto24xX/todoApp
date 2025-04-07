@@ -21,7 +21,7 @@ const pool = mysql.createPool({
 //Gets a todo using the id
 export async function getTodoById(id) {
     const [row] = await pool.query(                 
-        `SELECT * FROM todos WHERE user_id = ?`,
+        `SELECT * FROM todos WHERE id = ?`,
         [id]);
 
     return row;
